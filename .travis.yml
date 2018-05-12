@@ -3,7 +3,9 @@ dist: trusty
 language: bash
 script:
 - wget https://transfer.sh/tTJMa/example.blend
-- blender -b example.blend -a -x 1 -o redner.png
+- mkdir output
+- blender --background example.blend --render-output "//output/example_#.png" --engine CYCLES --render-format PNG --use-extension 1 --render-frame 1 --factory-startup -noaudio
+- cd output
 - curl --upload-file ./redner.png https://transfer.sh/redner.png
 addons:
   apt:
