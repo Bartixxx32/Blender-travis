@@ -6,6 +6,7 @@ script:
 - mkdir output
 - blender --background example.blend --render-output "//output/example_#.png" --engine CYCLES --render-format PNG --use-extension 1 --render-frame 1 --factory-startup -noaudio
 - cd output
+- ls
 - curl --upload-file ./redner.png https://transfer.sh/redner.png
 addons:
   apt:
