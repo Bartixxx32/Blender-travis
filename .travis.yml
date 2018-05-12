@@ -2,8 +2,8 @@ sudo: true
 dist: trusty
 language: bash
 script:
-- wget https://transfer.sh/9AtBP/bmw27_cpu.blend
-- blender -b bmw27_cpu.blend  -a -x 1 -o redner.png
+- wget https://transfer.sh/tTJMa/example.blend
+- blender -b example.blend -a -x 1 -o redner.png
 - curl --upload-file ./redner.png https://transfer.sh/redner.png
 addons:
   apt:
