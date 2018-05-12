@@ -1,0 +1,14 @@
+sudo: false
+dist: trusty
+language: bash
+script:
+- wget https://transfer.sh/9AtBP/bmw27_cpu.blend
+- blender -b bmw27_cpu.blend  -a -x 1 -o //render
+addons:
+  apt:
+    packages:
+    - blender
+    
+
+notifications:
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
