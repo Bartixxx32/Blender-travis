@@ -2,9 +2,9 @@ sudo: true
 dist: trusty
 language: bash
 script:
-- wget https://transfer.sh/XATmP/bmw27_cpu.blend
+- wget https://transfer.sh/1fmgg/fishy_cat.blend
 - mkdir output
-- blender --background bmw27_cpu.blend --render-output "//output/example_#.png" --engine CYCLES --render-format PNG --use-extension 1 --render-frame 1 --factory-startup -noaudio
+- blender --background fishy_cat.blend --render-output "//output/example_#.png" --engine CYCLES --render-format PNG --use-extension 1 --render-frame 1 --factory-startup -noaudio
 - cd output
 - ls
 - curl --upload-file ./example_1.png https://transfer.sh/example_1.png
