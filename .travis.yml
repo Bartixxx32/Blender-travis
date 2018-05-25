@@ -2,7 +2,7 @@ sudo: true
 dist: trusty
 language: bash
 script:
-- wget https://transfer.sh/1fmgg/fishy_cat.blend
+- wget https://transfer.sh/C7XET/fishy_cat.blend
 - mkdir output
 - blender --background fishy_cat.blend --render-output "//output/example_#.png" --engine CYCLES --render-format PNG --use-extension 1 --render-frame 1 --factory-startup -noaudio
 - cd output
